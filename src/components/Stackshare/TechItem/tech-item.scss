@@ -1,0 +1,38 @@
+@import "../../../common/styles/variables.scss";
+@import "../../../common/styles/responsive.scss";
+
+.a-tech-item {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  img {
+    border-radius: 20px;
+    border: 1px solid black;
+    height: 100px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: darkslategray;
+  }
+
+  @include respond-to("<=small") {
+    img {
+      border-radius: 10px;
+      height: 40px;
+      width: 40px;
+    }
+
+    &__title {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 0.7rem;
+      color: darkslategray;
+    }
+  }
+ }

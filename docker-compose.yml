@@ -1,0 +1,14 @@
+version: "3"
+services:
+  react_app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+    stdin_open: true
+    tty: true
+
+    environment:
+      # track file changes for windows devices
+      - WATCHPACK_POLLING=true

@@ -1,0 +1,24 @@
+// breakpoints
+$xsmall: 320px;
+$small: 475px;
+$medium: 768px;
+$large: 992px;
+$xlarge: 1152px;
+$xxlarge: 1440px;
+
+$xsmall-min: $xsmall;
+$xsmall-max: $small - 1;
+
+$small-min: $small;
+$small-max: $medium - 1;
+
+$large-min: $large;
+$large-max: $xlarge - 1;
+
+$xlarge-min: $xlarge;
+$xlarge-max: $xxlarge - 1;
+$xxlarge-min: $xxlarge;
+
+// colors
+$theme-color: #1a0b2e;
+$white-color: #fff;

@@ -1,0 +1,76 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/responsive.scss";
+
+.l-typewritter {
+  min-height: 95vh;
+  background: #151414;
+  padding: 0 160px;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+
+  .Typewriter__cursor {
+    color: orangered;
+  }
+
+  &__first {
+    &__code {
+      width: 370px;
+      min-height: 170px;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__second {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+      font-size: 2.5rem;
+      font-weight: 100;
+    }
+
+    &__subtitle {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1rem;
+      font-weight: 100;
+    }
+  }
+
+  @include respond-to('<=small') {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    align-items: start;
+
+    &__first {
+      height: 15vh;
+      padding-top: 70px;
+      &__code {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        min-height: 170px;
+        font-size: 1rem;
+
+        .Typewriter {
+          width: 80%;
+        }
+      }
+    }
+
+    &__second {
+      &__title {
+        font-size: 1.3rem;
+      }
+
+      &__subtitle {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/responsive.scss";
+
+.l-about {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid transparent;
+
+  &__title {
+    text-align: center;
+    margin-top: 60px;
+    color: darkslategray;
+    font-size: 30px;
+  }
+
+  &__content {
+    padding: 40px 160px 60px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+
+    &__description {
+      h3 {
+        font-size: 1.5rem;
+      }
+      p {
+        margin-top: 20px;
+        line-height: 1.5;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__gallery {
+      padding: 20px 40px;
+      img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  @include respond-to('<=small') {
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__content {
+      grid-template-columns: 1fr;
+      padding: 20px;
+      justify-content: center;
+
+      &__description {
+        margin-top: 30px;
+      }
+
+      &__gallery {
+        text-align: center;
+      }
+    }
+  }
+
+}

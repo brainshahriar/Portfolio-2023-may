@@ -1,0 +1,37 @@
+@import "../../common/styles/mixins.scss";
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/responsive.scss";
+
+.l-contact {
+  height: 200px;
+  background-color: rgba(0, 64, 138, 0.42);
+  @include flexify();
+
+  &__content {
+    &__name {
+      text-align: center;
+      font-size: 30px;
+      color: $white-color;
+    }
+
+    &__icons {
+      margin-top: 25px;
+      @include flexify();
+      gap: 40px;
+
+      img {
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @include respond-to("<=small") {
+    &__content {
+      &__name {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

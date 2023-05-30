@@ -1,0 +1,20 @@
+@import "../../common/styles/mixins.scss";
+
+.l_footer {
+  // stick it to bottom
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  width: 100%;
+  height: 150px;
+  background-color: #000;
+  color: white;
+
+  @include flexify();
+
+  &__copyright {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,94 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/responsive.scss";
+
+.l-stackshare {
+  padding: 60px 50px 150px;
+  min-height: 500px;
+  background: linear-gradient(to right, #fcfcfc, #fcf7f7);
+  $root: &;
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    &__header {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      #{$root}__item {
+        font-weight: 700;
+        font-size: 1.2rem;
+        border: 0.5px solid rgba(160, 173, 173, 0.18);
+        border-bottom: 0.5px solid rgba(34, 84, 48, 0.82);
+        padding: 5px 30px;
+        cursor: pointer;
+
+        &:hover {
+          color: rgba(0, 0, 0, 0.58);
+        }
+      }
+
+      #{$root}__selected {
+        background-color: rgba(7, 75, 16, 0.78);
+        color: #ffffff;
+
+        &:hover {
+          color: rgba(255, 255, 255, 0.78);
+        }
+      }
+    }
+
+    &__body {
+      padding: 0 200px;
+      margin: 30px auto 20px;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      align-items: center;
+      grid-gap: 20px
+    }
+
+    &__footer {
+      margin-top: 30px;
+
+      div {
+        text-align: center;
+
+        a {
+          text-decoration: underline;
+          color: darkblue
+        }
+      }
+    }
+  }
+
+  @include respond-to('<=small') {
+    padding: 40px 20px 150px;
+
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__content {
+      &__header {
+        #{$root}__item {
+          font-weight: 500;
+          font-size: 0.7rem;
+          padding: 5px 10px;
+        }
+      }
+
+      &__body {
+        padding: 20px;
+        margin: 10px auto;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-gap: 7px;
+      }
+    }
+  }
+}
